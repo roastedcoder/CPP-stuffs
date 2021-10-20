@@ -1,9 +1,10 @@
 
 /*
 
-    1. 
+    1. All the function of same name of a base class are hidden in derived class.
     
-    2. 
+    2. we use scope resolution operator inside derived class to counter function hiding
+        using Base::fun;
 */
 
 #include <bits/stdc++.h>
@@ -32,11 +33,18 @@ int main() {
     d.fun('c');
     d.Base::fun(100);
 
+    // d.fun("fun"); // compile-error
+
 }
 
 /*
     OP:
     Derived
+    Derived
+    Base
+
+    OP: using (using Base::fun;)
+    Base
     Derived
     Base
 
